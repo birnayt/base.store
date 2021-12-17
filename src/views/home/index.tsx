@@ -24,7 +24,7 @@ function View(props: Props) {
   return (
     <>
       {/* Seo Components */}
-      <Seo {...props} title="Test now 3" />
+      <Seo {...props} title="Test now 4" />
 
       {/* Visual Sections */}
       <h1 className="absolute top-[-100px]">{title}</h1>
