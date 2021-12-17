@@ -70,3 +70,7 @@ yarn-error.log
 
 # lighthouse CI autogen files
 .lighthouseci
+
+
+#secrets
+secrets.revealed.json
