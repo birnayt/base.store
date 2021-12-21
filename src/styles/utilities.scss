@@ -1,0 +1,6 @@
+// Mixins & functions utilities  //////////////////////////
+
+@mixin focus-ring {
+  outline: 2px solid var(--bg-focus-ring);
+  outline-offset: 1px;
+}
