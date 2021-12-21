@@ -4,6 +4,7 @@ import { Button as UIButton, Badge as UIBadge } from '@faststore/ui'
 import { BellRinging } from 'phosphor-react'
 
 import Alert from '../components/ui/Alert'
+import Button from '../components/ui/Button'
 import SearchInput from '../components/common/SearchInput'
 
 import '../styles/pattern-library.scss'
@@ -142,6 +143,20 @@ function Page() {
               </li>
               <li>
                 <UIBadge className="badge_small">15% off</UIBadge>
+              </li>
+            </ul>
+          </section>
+
+          <section className="grid-section grid-content">
+            <h2 className="title-subsection">Custom Button – Primary</h2>
+            <ul className="list-horizontal">
+              <li>
+                <Button variant="primary">Add to Cart</Button>
+              </li>
+              <li>
+                <Button variant="primary" disabled>
+                  Add to Cart
+                </Button>
               </li>
             </ul>
           </section>
