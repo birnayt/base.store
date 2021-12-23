@@ -65,13 +65,13 @@ function Page() {
           </section>
 
           <section className="grid-section grid-content">
-            <h2 className="title-subsection">Buttons</h2>
+            <h2 className="title-subsection">Custom Button – BuyButton</h2>
             <ul className="list-horizontal">
               <li>
                 <BuyButton>Buy Now</BuyButton>
               </li>
               <li>
-                <UIButton>Call to Action</UIButton>
+                <BuyButton disabled>Buy Now</BuyButton>
               </li>
               <li>
                 <UIButton>Call to Action</UIButton>
