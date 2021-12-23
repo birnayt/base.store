@@ -76,8 +76,73 @@ function Page() {
               <li>
                 <BuyButton disabled>Buy Now</BuyButton>
               </li>
+            </ul>
+          </section>
+
+          <section className="grid-section grid-content">
+            <h2 className="title-subsection">Custom Button – Primary</h2>
+            <ul className="list-horizontal">
               <li>
-                <UIButton>Call to Action</UIButton>
+                <Button
+                  variant="primary"
+                  iconLeft={<BellRingingIcon size={18} weight="bold" />}
+                >
+                  Call To Action
+                </Button>
+              </li>
+              <li>
+                <Button
+                  variant="primary"
+                  iconLeft={<BellRingingIcon size={18} weight="bold" />}
+                  disabled
+                >
+                  Call To Action
+                </Button>
+              </li>
+            </ul>
+            <ul className="list-horizontal dark">
+              <li>
+                <Button
+                  variant="primary"
+                  iconLeft={<BellRingingIcon size={18} weight="bold" />}
+                  inverse
+                >
+                  Call To Action
+                </Button>
+              </li>
+            </ul>
+          </section>
+
+          <section className="grid-section grid-content">
+            <h2 className="title-subsection">Custom Button – Secondary</h2>
+            <ul className="list-horizontal">
+              <li>
+                <Button
+                  variant="secondary"
+                  iconRight={<ArrowRightIcon size={18} weight="bold" />}
+                >
+                  Call To Action
+                </Button>
+              </li>
+              <li>
+                <Button
+                  variant="secondary"
+                  iconRight={<ArrowRightIcon size={18} weight="bold" />}
+                  disabled
+                >
+                  Call To Action
+                </Button>
+              </li>
+            </ul>
+            <ul className="list-horizontal dark">
+              <li>
+                <Button
+                  variant="secondary"
+                  iconRight={<ArrowRightIcon size={18} weight="bold" />}
+                  inverse
+                >
+                  Call To Action
+                </Button>
               </li>
             </ul>
           </section>
@@ -150,20 +215,6 @@ function Page() {
               </li>
               <li>
                 <DiscountBadge listPrice={100} spotPrice={50} small />
-              </li>
-            </ul>
-          </section>
-
-          <section className="grid-section grid-content">
-            <h2 className="title-subsection">Custom Button – Primary</h2>
-            <ul className="list-horizontal">
-              <li>
-                <Button variant="primary">Add to Cart</Button>
-              </li>
-              <li>
-                <Button variant="primary" disabled>
-                  Add to Cart
-                </Button>
               </li>
             </ul>
           </section>
