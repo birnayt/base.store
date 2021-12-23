@@ -209,7 +209,7 @@ function Page() {
               <li>
                 {showAlert3 ? (
                   <Alert
-                    icon={<BellRinging size={24} />}
+                    icon={<BellRingingIcon size={24} />}
                     dismissible
                     link={{ to: '#alerts', text: 'Action' }}
                     onClose={() => setShowAlert3(false)}
