@@ -77,7 +77,7 @@ function ProductDetails({ product: staleProduct }: Props) {
           { label: 'G', value: 'g' },
         ]}
       />
-      <Button {...buyProps} disabled={isValidating}>
+      <Button variant="secondary" {...buyProps} disabled={isValidating}>
         Add to cart
       </Button>
     </div>
