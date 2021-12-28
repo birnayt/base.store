@@ -1,12 +1,16 @@
 @import "../../../styles/vendors/include-media";
 
 .navbar {
+  min-height: 7.25rem;
+
   [data-store-search-input] {
     flex: 1 0 100%;
     order: 2;
   }
 
   @include media(">=notebook") {
+    min-height: 7.8125rem;
+
     [data-store-search-input] {
       order: 1;
       max-width: 37.5rem;
