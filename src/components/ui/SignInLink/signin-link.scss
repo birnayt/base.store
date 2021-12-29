@@ -1,0 +1,20 @@
+@import "../../../styles/vendors/include-media.scss";
+
+[data-store-signin-link] {
+  display: none;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-link);
+    text-decoration: none;
+
+    svg {
+      margin-right: var(--space-2);
+    }
+  }
+
+  @include media(">=notebook") {
+    display: inline;
+  }
+}

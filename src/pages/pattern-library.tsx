@@ -4,6 +4,7 @@ import { Button as UIButton } from '@faststore/ui'
 import { BellRinging } from 'phosphor-react'
 import CartToggle from 'src/components/cart/CartToggle'
 import { CartProvider, UIProvider } from '@faststore/sdk'
+import SignInLink from 'src/components/ui/SignInLink'
 
 import SkuSelector from '../components/ui/SkuSelector'
 import BuyButton from '../components/ui/BuyButton'
@@ -12,6 +13,17 @@ import DiscountBadge from '../components/ui/DiscountBadge'
 import SearchInput from '../components/common/SearchInput'
 
 import '../styles/pattern-library.scss'
+
+const SignInLinkUI = () => (
+  <section className="grid-section grid-content">
+    <h2 className="title-subsection">Sign In Link</h2>
+    <ul className="list-horizontal">
+      <li>
+        <SignInLink />
+      </li>
+    </ul>
+  </section>
+)
 
 function Page() {
   const [showAlert1, setShowAlert1] = useState(true)
@@ -217,6 +229,8 @@ function Page() {
               </CartProvider>
             </UIProvider>
           </section>
+
+          <SignInLinkUI />
         </main>
       </div>
     </>
