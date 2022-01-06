@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { schema } = require('./src/server')
 
 exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig }, stage }) => {
   const profiling = process.env.GATSBY_STORE_PROFILING === 'true'
@@ -69,4 +70,10 @@ exports.onPreBuild = ({ reporter }) => {
   // Copy @builder.io/partytown lib files to the <rootPath>/static/~partytown.
   // Those files are used by the Partytown component.
   copyPartytown()
+}
+
+exports.createSchemaCustomization = async (gatsbyApi) => {
+  const { actions } = gatsbyApi
+
+  actions.addThirdPartySchema({ schema: await schema })
 }
