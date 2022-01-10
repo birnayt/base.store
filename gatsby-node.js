@@ -1,4 +1,8 @@
-exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig }, stage }) => {
+exports.onCreateWebpackConfig = ({
+  actions: { setWebpackConfig, replaceWebpackConfig },
+  stage,
+  getConfig,
+}) => {
   const profiling = process.env.GATSBY_STORE_PROFILING === 'true'
 
   if (stage === 'build-javascript' && profiling) {
@@ -10,6 +14,19 @@ exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig }, stage }) => {
         concatenateModules: false,
       },
     })
+  }
+
+  if (stage === 'develop' || stage === 'build-javascript') {
+    const config = getConfig()
+    const miniCssExtractPlugin = config.plugins.find(
+      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
+    )
+
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true
+    }
+
+    replaceWebpackConfig(config)
   }
 }
 
